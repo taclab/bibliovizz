@@ -1,5 +1,8 @@
 # Bibliovizz
-![Schema](https://raw.githubusercontent.com/taclab/bibliovizz/master/docs/images/dashboard-audit.jpg)
+
+# Présentation
+L'objectif est de fournir aux bibliothèques un ensemble permettant de visualiser leurs données avec Kibana dans des Dashboards pédéfinis.
+Les données structurées en JSON selon le modèle .... sont importées automatiquement dans ElasticSearch.
 
 ## Architecture
 
@@ -8,7 +11,6 @@
 
 ## Structuration de données
 
-# Présentation
-L'objectif est de fournir aux bibliothèques un ensemble permettant de visualiser leurs données avec Kibana dans des Dashboards pédéfinis.
-Les données structurées en JSON selon le modèle .... sont importées automatiquement dans ElasticSearch.
+
+![Schema](https://raw.githubusercontent.com/taclab/bibliovizz/master/docs/images/dashboard-audit.jpg)
 
