@@ -1,10 +1,12 @@
 # Bibliovizz
 
 # Présentation
-L'objectif est de fournir aux bibliothèques une architecture permettant de visualiser leurs données avec Kibana dans des Dashboards prédéfinis. Ces dashboard seraient réutilisables par d'autres établissements. 
-A partir d'un export de données de prêts Koha en format CSV, nous avons établi 2 profils de tableau de bord (dashboard) permettant de fournir des visuels. Un dashboard orienté "lecteur" propose les listes des documents les plus empruntés, personnalisable selon le profil du lecteur. Un dashboard orienté "professionnel" propose une vue sur les collections combinant différents paramètres (âge de la collection, taux de rotation des nouveautés...) Les visuels obtenus permettent d'orienter finement la politique documentaire. Les visuels proposent une vue générale qui peut être affinée, filtrée pour une mise à jour immédiate (focus sur un type de lecteur, sur un segment de collections, date...)
+L'objectif est de fournir aux bibliothèques une architecture permettant de visualiser leurs données avec Kibana dans des Dashboards prédéfinis. Ces dashboard seraient réutilisables par d'autres établissements. A partir d'un export de données de prêts Koha en format CSV, nous avons établi 2 profils de tableau de bord (dashboard) permettant de fournir des visuels. 
 
-Dans un deuxième temps, pour visualiser l'ensemble des données d'un catalogue, nous avons travaillé un modèle de données structuré en JSON.  Ce modèle pourra être importé automatiquement dans ElasticSearch. Une étape en amont est envisagée :  une moulinette transformant le cvs en json. 
+Un **dashboard orienté "lecteur"** propose les listes des documents les plus empruntés, personnalisable selon le profil du lecteur. Un **dashboard orienté "professionnel"** propose une vue sur les collections combinant différents paramètres (âge de la collection, taux de rotation des nouveautés...)
+Les visuels obtenus permettent d'orienter finement la politique documentaire. Les visuels proposent une vue générale qui peut être affinée, filtrée pour une mise à jour immédiate (focus sur un type de lecteur, sur un segment de collections, date...)
+
+Dans un deuxième temps, pour visualiser l'ensemble des données d'un catalogue, nous avons travaillé **un modèle de données structuré en JSON**.  Ce modèle pourra être importé automatiquement dans ElasticSearch. Une étape en amont est envisagée :  une moulinette transformant le cvs en json. 
 
 
 ## Architecture
