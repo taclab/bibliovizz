@@ -1,0 +1,17 @@
+nav
+{
+	padding-left: 10px;
+}
+
+article
+{
+	padding: 10px;
+}
+
+iframe
+{
+	border : none;
+	margin-top : 5px;
+	width: 100%;
+	height: 500px;
+}

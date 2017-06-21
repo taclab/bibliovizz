@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard - Aide à la décision</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="bibliovizz.css">
+        
+        <!-- Ajax -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+        <!-- Google Chart -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+			google.charts.load('current', {packages: ['corechart']});     
+		</script>
+
+        <!-- Materialze -->
+        <!-- Compiled and minified CSS -->
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+
+    </head>
+
+    <body>
+    	<section>
+    		<header></header>
+
+    		<nav>
+    			<div class="nav-wrapper">
+    				<a class="brand-logo">Dashboards</a>
+    				<ul id="nav-mobile" class="right hide-on-med-and-down">
+				        <li><a href="index.html">Aide à la décision</a></li>
+				        <li><a href="index2.html">Lecteurs (Rennes 2)</a></li>
+				    </ul>
+    			</div>
+    		</nav>
+    		<article>
+	    		<h1>Dashboard - Aide à la décision</h1>
+
+	    		<div class="row s12">	
+		    		<div class="col s6 left">
+		    			<h5>Nombre total de prêts</h5>
+		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/df57f1f0-54c6-11e7-b641-c7300a14c1c0?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:'Nombre+de+pr%C3%AAts'),schema:metric,type:count)),listeners:(),params:(fontSize:60,handleNoResults:!t),title:'Nombre+de+pr%C3%AAts',type:metric))" ></iframe>
+		    		</div>
+
+		    		<div class="col s6 right">
+		    			<h5>Nombre d'ouvrages</h5>
+		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/ed63dfb0-55d5-11e7-b1a0-47b77f1f498a?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:'Nombre+d!'ouvrage',field:biblio_id.keyword),schema:metric,type:cardinality)),listeners:(),params:(fontSize:60,handleNoResults:!t),title:'Nombre+d!'ouvrages',type:metric))" ></iframe>
+		    		</div>
+
+		    		<div class="col s12">
+		    			<h5>Nombre d'exemplaires</h5>
+		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/ed63dfb0-55d5-11e7-b1a0-47b77f1f498a?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:'Nombre+d!'ouvrage',field:biblio_id.keyword),schema:metric,type:cardinality)),listeners:(),params:(fontSize:60,handleNoResults:!t),title:'Nombre+d!'ouvrages',type:metric))"></iframe>
+		    		</div>
+		    		
+		    		<div class="card col s12">
+		    			<h5>Transactions par jour</h5>
+		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/778c86b0-55d6-11e7-a9ad-cb2ba48fda75?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:Pr%C3%AAts),schema:metric,type:count),(enabled:!t,id:'2',params:(customInterval:'2h',customLabel:Dates,extended_bounds:(),field:transaction_date,interval:d,min_doc_count:1),schema:segment,type:date_histogram)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(show:!t,truncate:100),position:bottom,scale:(type:linear),show:!t,style:(),title:(text:Dates),type:category)),defaultYExtents:!f,drawLinesBetweenPoints:!t,grid:(categoryLines:!f,style:(color:%23eee)),interpolate:linear,legendPosition:right,radiusRatio:9,scale:linear,seriesParams:!((data:(id:'1',label:Pr%C3%AAts),drawLinesBetweenPoints:!t,interpolate:linear,mode:stacked,show:true,showCircles:!t,type:area,valueAxis:ValueAxis-1)),setYExtents:!f,showCircles:!t,times:!(),valueAxes:!((id:ValueAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:100),name:LeftAxis-1,position:left,scale:(mode:normal,type:linear),show:!t,style:(),title:(text:Pr%C3%AAts),type:value))),title:'Transactions+par+jour',type:area))"></iframe>
+		    		</div>
+
+		    		<div class="card col s6">
+		    			<h5>Répartition des prêts par mois et par UFR pour les étudiants</h5>
+		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/23087330-55d9-11e7-9352-379e4c07c3ba?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'lecteur_statut:student')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:Pr%C3%AAts),schema:metric,type:count),(enabled:!t,id:'2',params:(customInterval:'2h',customLabel:mois,extended_bounds:(),field:transaction_date,interval:M,min_doc_count:1),schema:segment,type:date_histogram),(enabled:!t,id:'3',params:(filters:!(('$$hashKey':'object:1854',input:(query:(query_string:(analyze_wildcard:!t,query:'lecteur_affectation:901'))),label:'Ufr+Arts,+Lettres,+Communication'),('$$hashKey':'object:1855',input:(query:(query_string:(analyze_wildcard:!t,query:'lecteur_affectation:902'))),label:'Ufr+Langues'),('$$hashKey':'object:1856',input:(query:(query_string:(analyze_wildcard:!t,query:'lecteur_affectation:903'))),label:'Ufr+Sciences+Humaines'),('$$hashKey':'object:1857',input:(query:(query_string:(analyze_wildcard:!t,query:'lecteur_affectation:904'))),label:'Ufr+Sciences+Sociales'),('$$hashKey':'object:1858',input:(query:(query_string:(analyze_wildcard:!t,query:'lecteur_affectation:905'))),label:'Ufr+Activites+Physiques+Et+Sportives'))),schema:group,type:filters)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(show:!t,truncate:100),position:bottom,scale:(type:linear),show:!t,style:(),title:(text:mois),type:category)),defaultYExtents:!f,drawLinesBetweenPoints:!t,grid:(categoryLines:!f,style:(color:%23eee)),interpolate:linear,legendPosition:right,radiusRatio:9,scale:linear,seriesParams:!((data:(id:'1',label:Pr%C3%AAts),drawLinesBetweenPoints:!t,interpolate:cardinal,lineWidth:2,mode:stacked,show:!t,showCircles:!t,type:area,valueAxis:ValueAxis-1)),setYExtents:!f,showCircles:!t,times:!(),valueAxes:!(('$$hashKey':'object:1892',id:ValueAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:100),name:LeftAxis-1,position:left,scale:(mode:normal,type:linear),show:!t,style:(),title:(text:Pr%C3%AAts),type:value))),title:'R%C3%A9partition+des+pr%C3%AAts+par+mois+et+par+UFR+pour+les+%C3%A9tudiants',type:area))"></iframe>
+		    		</div>
+
+		    		<div class="card col s6">
+		    			<h5>Prêts par an par type de lecteur</h5>
+		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/f3671480-5590-11e7-a357-6b09f9cf02d9?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:Pr%C3%AAts),schema:metric,type:count),(enabled:!t,id:'2',params:(customInterval:'2h',extended_bounds:(),field:transaction_date,interval:y,min_doc_count:1),schema:segment,type:date_histogram),(enabled:!t,id:'3',params:(customLabel:discpline,field:lecteur_discipline.keyword,order:desc,orderBy:'1',size:20),schema:group,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(show:!t,truncate:100),position:bottom,scale:(type:linear),show:!t,style:(),title:(text:'transaction_date+per+year'),type:category)),defaultYExtents:!f,drawLinesBetweenPoints:!t,grid:(categoryLines:!t,style:(color:%23eee)),interpolate:linear,legendPosition:right,radiusRatio:9,scale:linear,seriesParams:!((data:(id:'1',label:Pr%C3%AAts),drawLinesBetweenPoints:!t,mode:stacked,show:true,showCircles:!t,type:histogram,valueAxis:ValueAxis-1)),setYExtents:!f,showCircles:!t,times:!(),valueAxes:!(('$$hashKey':'object:828',id:ValueAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:100),name:LeftAxis-1,position:left,scale:(mode:normal,type:linear),show:!t,style:(),title:(text:Pr%C3%AAts),type:value))),title:'Pr%C3%AAts+par+an+par+type+de+lecteur',type:histogram))"></iframe>
+		    		</div>
+
+		    		<div class="card col s12">
+		    			<div id="container" style="width: 750px; height: 700px; margin: 0 auto"></div>
+		    		</div>
+
+		    		<div class="card col s6">
+		    			<h5>Prêts par statut des lecteurs</h5>
+		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/1ffda0b0-54c7-11e7-b641-c7300a14c1c0?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:Pr%C3%AAts),schema:metric,type:count),(enabled:!t,id:'2',params:(customLabel:'',field:lecteur_statut.keyword,order:desc,orderBy:'1',size:5),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTooltip:!t,isDonut:!f,legendPosition:right),title:'Pr%C3%AAts+par+statut+des+lecteurs',type:pie))"></iframe>
+		    		</div>
+
+		    		<div class="card col s6">
+		    			<h5>Nombre de prêts par affectations (UFR, laboratoires, services de l'université, etc.)</h5>
+		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/158f9370-55d7-11e7-a9ad-cb2ba48fda75?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(vis:(colors:(Count:%23CCA300))),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:Pr%C3%AAts),schema:metric,type:count),(enabled:!t,id:'2',params:(field:lecteur_affectation,order:desc,orderBy:'1',size:15),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(show:!t,truncate:100),position:bottom,scale:(type:linear),show:!t,style:(),title:(text:'lecteur_affectation:+Descending'),type:category)),defaultYExtents:!f,drawLinesBetweenPoints:!t,grid:(categoryLines:!f,style:(color:%23eee)),interpolate:linear,legendPosition:right,radiusRatio:9,scale:linear,seriesParams:!((data:(id:'1',label:Pr%C3%AAts),drawLinesBetweenPoints:!t,mode:normal,show:true,showCircles:!t,type:histogram,valueAxis:ValueAxis-1)),setYExtents:!f,showCircles:!t,times:!(),valueAxes:!(('$$hashKey':'object:1605',id:ValueAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:100),name:LeftAxis-1,position:left,scale:(mode:normal,type:linear),show:!t,style:(),title:(text:Pr%C3%AAts),type:value))),title:'Nombre+de+pr%C3%AAts+par+affectations+(UFR,+laboratoires,+services+de+l!'universit%C3%A9,+etc.)',type:histogram))"></iframe>
+		    		</div>
+
+		    		<div class="card col s6">
+		    			<h5>Prêts par catégorie de lecteur et public cible</h5>
+		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/223cfef0-55af-11e7-9857-35f79deadc97?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:Pr%C3%AAts),schema:metric,type:count),(enabled:!t,id:'2',params:(field:lecteur_categorie.keyword,size:8),schema:segment,type:significant_terms),(enabled:!t,id:'3',params:(field:biblio_publiccible.keyword,size:2),schema:group,type:significant_terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(show:!t,truncate:100),position:bottom,scale:(type:linear),show:!t,style:(),title:(text:'Top+8+unusual+terms+in+lecteur_categorie.keyword'),type:category)),defaultYExtents:!f,drawLinesBetweenPoints:!t,grid:(categoryLines:!f,style:(color:%23eee)),interpolate:linear,legendPosition:right,radiusRatio:9,scale:linear,seriesParams:!((data:(id:'1',label:Pr%C3%AAts),drawLinesBetweenPoints:!t,mode:stacked,show:true,showCircles:!t,type:histogram,valueAxis:ValueAxis-1)),setYExtents:!f,showCircles:!t,times:!(),valueAxes:!(('$$hashKey':'object:336',id:ValueAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:100),name:LeftAxis-1,position:left,scale:(mode:normal,type:linear),show:!t,style:(),title:(text:Pr%C3%AAts),type:value))),title:'Pr%C3%AAts+par+cat%C3%A9gorie+de+lecteur+et+public+cible',type:histogram))"></iframe>
+		    		</div>
+
+		    		<div class="card col s6">
+		    			<h5>Répartition des prêts par sites</h5>
+		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/87152910-55d7-11e7-9c43-e7fa0440b0bc?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(vis:(colors:(Count:%23BF1B00))),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(customLabel:Biblioth%C3%A8ques,field:exemplaire_site.keyword,order:desc,orderBy:'1',size:13),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:200),position:left,scale:(type:linear),show:!t,style:(),title:(text:Biblioth%C3%A8ques),type:category)),defaultYExtents:!f,drawLinesBetweenPoints:!t,grid:(categoryLines:!f,style:(color:%23eee)),interpolate:linear,legendPosition:right,radiusRatio:9,scale:linear,seriesParams:!((data:(id:'1',label:Count),drawLinesBetweenPoints:!t,mode:normal,show:!t,showCircles:!t,type:histogram,valueAxis:ValueAxis-1)),setYExtents:!f,showCircles:!t,times:!(),valueAxes:!((id:ValueAxis-1,labels:(filter:!t,rotate:75,show:!t,truncate:100),name:LeftAxis-1,position:bottom,scale:(mode:normal,type:linear),show:!t,style:(),title:(),type:value))),title:'R%C3%A9partition+des+pr%C3%AAts+par+sites',type:histogram))"></iframe>
+		    		</div>
+
+		    		<div class="card col s6">
+		    			<h5>Répartition des prêts par cycles</h5>
+		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/6a8c0710-55db-11e7-9cd9-351e81ec4e4b?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(filters:!((input:(query:(query_string:(analyze_wildcard:!t,query:'lecteur_cycleuniv:1'))),label:Licence),(input:(query:(query_string:(analyze_wildcard:!t,query:'lecteur_cycleuniv:2'))),label:Master),(input:(query:(query_string:(analyze_wildcard:!t,query:'lecteur_cycleuniv:3'))),label:Doctorat))),schema:segment,type:filters)),listeners:(),params:(addLegend:!t,addTooltip:!t,isDonut:!f,legendPosition:right),title:'R%C3%A9partition+des+pr%C3%AAts+par+cycles',type:pie))"></iframe>
+		    		</div>
+
+		    		<div class="card col s6">
+		    			<h5>Age des documents par cote</h5>
+		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/a6b28560-55d2-11e7-a839-3f18063f77d0?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(vis:(colors:('January+1st+2000,+01:00:00.000+to+December+31st+2004,+01:00:00.000':%23F9E2D2,'January+1st+2005,+01:00:00.000+to+December+31st+2009,+01:00:00.000':%23F9BA8F,'January+1st+2010,+01:00:00.000+to+December+31st+2014,+01:00:00.000':%23F9934E,'January+1st+2015,+01:00:00.000+to+June+20th+2017,+17:38:04.174':%23E0752D,'January+1st+2015,+01:00:00.000+to+June+20th+2017,+17:42:08.949':%23C15C17,'January+1st+2015,+01:00:00.000+to+June+20th+2017,+17:56:20.488':%23C15C17,'January+1st+2015,+01:00:00.000+to+June+20th+2017,+18:03:38.128':%23890F02),legendOpen:!t)),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:Pr%C3%AAts),schema:metric,type:count),(enabled:!t,id:'2',params:(filters:!((input:(query:(query_string:(analyze_wildcard:!t,query:'exemplaire_cote:0*+OR+exemplaire_cote:R+0*'))),label:'000+-+Informatique,+information,+ouvrages+g%C3%A9n%C3%A9raux'),(input:(query:(query_string:(analyze_wildcard:!t,query:'exemplaire_cote:1*+OR+exemplaire_cote:S*'))),label:'100+-+Philo-Psycho'),(input:(query:(query_string:(analyze_wildcard:!t,query:'exemplaire_cote:2*+OR+exemplaire_cote:U*'))),label:'200+-+Religion'),(input:(query:(query_string:(analyze_wildcard:!t,query:'exemplaire_cote:3*+OR+exemplaire_cote:V*'))),label:'300+-+Sciences+sociales'),(input:(query:(query_string:(analyze_wildcard:!t,query:'exemplaire_cote:4*+OR+exemplaire_cote:XG*+OR+exemplaire_cote:XC*+OR+exemplaire_cote:XB*+OR+exemplaire_cote:XE*'))),label:'400+-+Langues'),(input:(query:(query_string:(analyze_wildcard:!t,query:'exemplaire_cote:5*+OR+exemplaire_cote:R+5*'))),label:'500+-+Sciences+de+la+nature+et+Math%C3%A9matiques'),(input:(query:(query_string:(analyze_wildcard:!t,query:'exemplaire_cote:6*+OR+exemplaire_cote:R+6*'))),label:'600+-+Technologie+(Sciences+appliqu%C3%A9es)'),(input:(query:(query_string:(analyze_wildcard:!t,query:'exemplaire_cote:7*+OR+exemplaire_cote:W*'))),label:'700+-+Arts,+Loisirs+et+Sports'),(input:(query:(query_string:(analyze_wildcard:!t,query:'exemplaire_cote:8*+OR+exemplaire_cote:XA*+OR+exemplaire_cote:XD*+OR+exemplaire_cote:XF*'))),label:'800+-+Litt%C3%A9rature+(Belles-Lettres)+et+techniques+d%E2%80%99%C3%A9criture'),(input:(query:(query_string:(analyze_wildcard:!t,query:'exemplaire_cote:9*+OR+exemplaire_cote:Z+9*+OR+exemplaire_cote:Y+9*'))),label:'900+-+G%C3%A9ographie,+Histoire+et+disciplines+auxiliaires'))),schema:segment,type:filters),(enabled:!t,id:'3',params:(customLabel:'Date+de+publication',field:biblio_datepubli,ranges:!((from:'2000-01-01',to:'2004-12-31'),(from:'2005-01-01',to:'2009-12-31'),(from:'2010-01-01',to:'2014-12-31'),(from:'2015-01-01',to:now))),schema:group,type:date_range)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(show:!t,truncate:100),position:bottom,scale:(type:linear),show:!t,style:(),title:(text:filters),type:category)),defaultYExtents:!f,drawLinesBetweenPoints:!t,grid:(categoryLines:!f,style:(color:%23eee)),interpolate:linear,legendPosition:right,radiusRatio:9,scale:linear,seriesParams:!((data:(id:'1',label:Pr%C3%AAts),drawLinesBetweenPoints:!t,mode:stacked,show:true,showCircles:!t,type:histogram,valueAxis:ValueAxis-1)),setYExtents:!f,showCircles:!t,times:!(),valueAxes:!((id:ValueAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:100),name:LeftAxis-1,position:left,scale:(mode:normal,type:linear),show:!t,style:(),title:(text:Pr%C3%AAts),type:value))),title:'Age+des+documents+par+cote',type:histogram))"></iframe>
+		    		</div>
+
+		    		<div class="card col s6">
+		    			<h5>Répartition des prêts par mois et par statuts</h5>
+		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/5216eae0-55d8-11e7-9352-379e4c07c3ba?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(customInterval:'2h',customLabel:mois,extended_bounds:(),field:transaction_date,interval:M,min_doc_count:1),schema:segment,type:date_histogram),(enabled:!t,id:'3',params:(customLabel:Statuts,field:lecteur_statut.keyword,order:desc,orderBy:'1',size:10),schema:group,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(show:!t,truncate:100),position:bottom,scale:(type:linear),show:!t,style:(),title:(text:mois),type:category)),defaultYExtents:!f,drawLinesBetweenPoints:!t,grid:(categoryLines:!f,style:(color:%23eee)),interpolate:linear,legendPosition:right,radiusRatio:9,scale:linear,seriesParams:!((data:(id:'1',label:Count),drawLinesBetweenPoints:!t,interpolate:cardinal,lineWidth:2,mode:stacked,show:!t,showCircles:!t,type:area,valueAxis:ValueAxis-1)),setYExtents:!f,showCircles:!t,times:!(),valueAxes:!((id:ValueAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:100),name:LeftAxis-1,position:left,scale:(mode:normal,type:linear),show:!t,style:(),title:(text:Count),type:value))),title:'R%C3%A9partition+des+pr%C3%AAts+par+mois+et+par+statuts',type:area))"></iframe>
+		    		</div>
+
+		    		<div class="card col s6">
+		    			<h5>Répartition des prêts par types de document</h5>
+		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/acc407e0-55d6-11e7-a9ad-cb2ba48fda75?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(customLabel:Biblioth%C3%A8ques,field:biblio_typedoc.keyword,order:desc,orderBy:'1',size:13),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:200),position:left,scale:(type:linear),show:!t,style:(),title:(text:Biblioth%C3%A8ques),type:category)),defaultYExtents:!f,drawLinesBetweenPoints:!t,grid:(categoryLines:!f,style:(color:%23eee)),interpolate:linear,legendPosition:right,radiusRatio:9,scale:linear,seriesParams:!((data:(id:'1',label:Count),drawLinesBetweenPoints:!t,mode:normal,show:!t,showCircles:!t,type:histogram,valueAxis:ValueAxis-1)),setYExtents:!f,showCircles:!t,times:!(),valueAxes:!((id:ValueAxis-1,labels:(filter:!t,rotate:75,show:!t,truncate:100),name:LeftAxis-1,position:bottom,scale:(mode:normal,type:linear),show:!t,style:(),title:(),type:value))),title:'R%C3%A9partition+des+pr%C3%AAts+par+types+de+document',type:histogram))"></iframe>
+		    		</div>
+
+		    		<div class="card col s6">
+		    			<h5>Répartition par catégorie & par discipline</h5>
+		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/bda11e10-55d4-11e7-9462-21daa9fe9d3d?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(field:lecteur_discipline.keyword,order:desc,orderBy:'1',size:20),schema:group,type:terms),(enabled:!t,id:'3',params:(field:lecteur_categorie.keyword,order:desc,orderBy:'1',size:20),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(show:!t,truncate:100),position:bottom,scale:(type:linear),show:!t,style:(),title:(text:'lecteur_categorie.keyword:+Descending'),type:category)),defaultYExtents:!f,drawLinesBetweenPoints:!t,grid:(categoryLines:!f,style:(color:%23eee)),interpolate:linear,legendPosition:right,radiusRatio:9,scale:linear,seriesParams:!((data:(id:'1',label:Count),drawLinesBetweenPoints:!t,mode:stacked,show:true,showCircles:!t,type:histogram,valueAxis:ValueAxis-1)),setYExtents:!f,showCircles:!t,times:!(),valueAxes:!((id:ValueAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:100),name:LeftAxis-1,position:left,scale:(mode:percentage,type:linear),show:!t,style:(),title:(text:Count),type:value))),title:'Repartition+par+cat%C3%A9gorie+%26+par+discipline',type:histogram))"></iframe>
+		    		</div>
+
+		    		<div class="card col s6">
+		    			<h5>Prêts par date de création de la notice</h5>
+		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/40869170-55b2-11e7-9857-35f79deadc97?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(customInterval:'2h',extended_bounds:(),field:exemplaire_datecreation,interval:y,min_doc_count:1),schema:segment,type:date_histogram)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(show:!t,truncate:100),position:bottom,scale:(type:linear),show:!t,style:(),title:(text:'exemplaire_datecreation+per+year'),type:category)),defaultYExtents:!f,drawLinesBetweenPoints:!t,grid:(categoryLines:!f,style:(color:%23eee)),interpolate:linear,legendPosition:right,radiusRatio:9,scale:linear,seriesParams:!((data:(id:'1',label:Count),drawLinesBetweenPoints:!t,mode:stacked,show:true,showCircles:!t,type:histogram,valueAxis:ValueAxis-1)),setYExtents:!f,showCircles:!t,times:!(),valueAxes:!((id:ValueAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:100),name:LeftAxis-1,position:left,scale:(mode:normal,type:linear),show:!t,style:(),title:(),type:value))),title:'Pr%C3%AAts+par+date+de+cr%C3%A9ation+de+la+notice',type:histogram))"></iframe>
+		    		</div>
+
+		    		<div class="card col s6">
+		    			<h5>Répartition des prêts par date de publication</h5>
+		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/68c71b00-55da-11e7-9352-379e4c07c3ba?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(filters:!((input:(query:(query_string:(analyze_wildcard:!t,query:'biblio_datepubli:+%5B2011+TO+2015%5D'))),label:'2011+%C3%A0+2015'),(input:(query:(query_string:(analyze_wildcard:!t,query:'biblio_datepubli:+%5B2016+TO+2017%5D'))),label:'2016+%C3%A0+2017'),(input:(query:(query_string:(analyze_wildcard:!t,query:'biblio_datepubli:+%5B2006+TO+2010%5D'))),label:'2006+%C3%A0+2010'),(input:(query:(query_string:(analyze_wildcard:!t,query:'biblio_datepubli:+%5B2001+TO+2005%5D'))),label:'2001+%C3%A0+2005'),(input:(query:(query_string:(analyze_wildcard:!t,query:'biblio_datepubli:+%5B1991+TO+2000%5D'))),label:'1991+%C3%A0+2000'),(input:(query:(query_string:(analyze_wildcard:!t,query:'biblio_datepubli:+%5B1981+TO+1990%5D'))),label:'1981+%C3%A0+1990'),(input:(query:(query_string:(analyze_wildcard:!t,query:'biblio_datepubli:+%5B1971+TO+1980%5D'))),label:'1971+%C3%A0+1980'),(input:(query:(query_string:(analyze_wildcard:!t,query:'biblio_datepubli:+%5B1901+TO+1970%5D'))),label:'1901+%C3%A0+1970'),(input:(query:(query_string:(analyze_wildcard:!t,query:'biblio_datepubli:+%5B1801+TO+1900%5D'))),label:'1801+%C3%A0+1900'))),schema:segment,type:filters)),listeners:(),params:(addLegend:!t,addTooltip:!t,isDonut:!f,legendPosition:right),title:'R%C3%A9partition+des+pr%C3%AAts+par+date+de+publication',type:pie))"></iframe>
+		    		</div>
+
+		    		<div class="card col s6">
+		    			<h5>Répartition des prêts par date de création d'exemplaire</h5>
+		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/9e153170-55da-11e7-9352-379e4c07c3ba?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(customInterval:'2h',customLabel:'Date+de+cr%C3%A9ation+d!'exemplaire',extended_bounds:(),field:exemplaire_datecreation,interval:y,min_doc_count:1),schema:segment,type:date_histogram)),listeners:(),params:(addLegend:!t,addTooltip:!t,isDonut:!f,legendPosition:right),title:'R%C3%A9partition+des+pr%C3%AAts+par+date+de+cr%C3%A9ation+d!'exemplaire',type:pie))"></iframe>
+		    		</div>
+
+		    		<div class="col s6">
+		    			<h5>Auteurs les + empruntés</h5>
+		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/ea166460-55bf-11e7-af2a-712fbf321056?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(vis:(params:(sort:(columnIndex:!n,direction:!n)))),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:Pr%C3%AAts),schema:metric,type:count),(enabled:!t,id:'2',params:(customLabel:Auteurs,field:biblio_700auteur.keyword,order:desc,orderBy:'1',size:20),schema:bucket,type:terms)),listeners:(),params:(perPage:10,showMeticsAtAllLevels:!f,showPartialRows:!f,showTotal:!f,sort:(columnIndex:!n,direction:!n),totalFunc:sum),title:'Auteurs+les+plus+empruntes',type:table))"></iframe>
+		    		</div>
+
+		    		<div class="col s6">
+		    		<h5>Ouvrages les + empruntés</h5>
+		    		<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/f1e9c8e0-55c8-11e7-a839-3f18063f77d0?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'biblio_typedoc:LIVRE')),uiState:(vis:(params:(sort:(columnIndex:2,direction:desc)))),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:Pr%C3%AAts),schema:metric,type:count),(enabled:!t,id:'2',params:(customLabel:Titres,field:biblio_titre.keyword,order:desc,orderBy:'1',size:20),schema:bucket,type:terms),(enabled:!t,id:'3',params:(customLabel:Auteur,field:biblio_700auteur.keyword,order:desc,orderBy:'1',size:20),schema:bucket,type:terms)),listeners:(),params:(perPage:20,showMeticsAtAllLevels:!f,showPartialRows:!f,showTotal:!f,sort:(columnIndex:!n,direction:!n),totalFunc:sum),title:'Ouvrages+les+%2B+emprunt%C3%A9s',type:table))"></iframe>
+		    		</div>
+		    	</div>
+		    </article>
+    	</section>
+
+    	<footer class="page-footer">
+          	<div class="footer-copyright">
+            	<div class="container">
+            		© 2017 Copyright Text
+            		<a class="grey-text text-lighten-4 right" href="#!">Plus de liens</a>
+            	</div>
+          	</div>
+        </footer>
+
+        		<script language="JavaScript">
+		      var transaction;
+		      var annee;
+		      var resultatAns = [];
+
+	      		for(annee = 2012; annee <= 2017 ; annee++){
+	      			if(annee == 2017)
+	      				loadData(annee.toString(),(annee-1).toString(),true);
+	      			else
+	      				loadData(annee.toString(),(annee-1).toString(),false);
+	      		}
+
+
+				function loadData(anneeS,anneeD,lancer) {
+
+			   	// Define the chart to be drawn.
+				$.ajax({
+					    url      : "http://86.238.202.61:9200/prevu/_search",
+					    type: 'POST',
+					    data :
+						JSON.stringify(
+				        {
+							"query": {
+								"bool" :{
+									 "must" :[
+										{
+											"range" : {
+												"transaction_date": {
+												    "gte" : anneeD+"-01-01",
+												    "lt" :  anneeS+"-12-31"
+												}
+											}
+										},
+										{
+											"range" : {
+												"exemplaire_datecreation": {
+												    "gte" : anneeD+"-01-01",
+												    "lt" :  anneeS+"-12-31"
+												}
+											}
+										}
+									]
+								}
+							}
+						}),
+					         
+					    dataType : "json",
+						error    : function(request, error) { // Info Debuggage si erreur         
+					        alert("Erreur : responseText: "+request.responseText);
+					    },
+						success  : function(data) {		 
+					        resultatAns[anneeS] = data;
+					        loadData2(lancer,anneeS);
+					    }       
+					});
+				}
+			     
+
+			     function loadData2(lancer,anneeS){
+
+			     	if(lancer == true){
+			         	 $.ajax({
+			     
+					          url      : "http://86.238.202.61:9200/prevu/_search",
+					          type: 'POST',
+					           data :
+						          JSON.stringify(
+				                    {
+									   "query": {
+											"range" : {
+											   "transaction_date": {
+											       "gte" : anneeS+"-01-01",
+											       "lt" :  anneeS+"-12-31"
+											    }
+										  	}	
+										}
+									}),
+					          dataType : "json",
+
+					          error    : function(request, error) { // Info Debuggage si erreur         
+					                       alert("Erreur : responseText: "+request.responseText);
+					                     },
+
+					          success  : function(data) {
+					          				transaction = data;
+					                      	draw();
+					                     }       
+					     });
+					}else{
+						 $.ajax({
+			     
+					          url      : "http://86.238.202.61:9200/prevu/_search",
+					          type: 'POST',
+					          data :
+						          JSON.stringify(
+				                    {
+									   "query": {
+											"range" : {
+											   "transaction_date": {
+											       "gte" : anneeS+"-01-01",
+											       "lt" :  anneeS+"-12-31"
+											    }
+										  	}	
+										}
+									}),
+
+					          dataType : "json",
+
+					          error    : function(request, error) { // Info Debuggage si erreur         
+					                       alert("Erreur : responseText: "+request.responseText);
+					                     },
+
+					          success  : function(data) {
+					          				transaction = data;				                      	
+					                     }       
+					     });
+					}
+
+
+			     }
+
+			     function draw(){
+			     	google.charts.setOnLoadCallback(drawCharts); 
+			     }
+
+			     function drawCharts(){
+
+				         var data = google.visualization.arrayToDataTable([
+
+				            ['Year', 'Nouveautés (-2 ans)', 'Collection totale' ],
+
+				   	      	['2012', resultatAns['2012'].hits.total, transaction.hits.total],
+				   	      	['2013', resultatAns['2013'].hits.total, transaction.hits.total],
+				   	      	['2014', resultatAns['2014'].hits.total, transaction.hits.total],
+				   	      	['2015', resultatAns['2015'].hits.total, transaction.hits.total  ],
+				   	      	['2016', resultatAns['2016'].hits.total, transaction.hits.total],
+				   	      	['2017', resultatAns['2017'].hits.total, transaction.hits.total]
+
+				         ]);
+
+				         var options = {
+
+				            title: 'Proportion des nouveautés dans les prêts annuels ',
+
+				            isStacked:'percent'	  
+
+				         };  
+				         // Instantiate and draw the chart.
+
+				         var chart = new google.visualization.ColumnChart(document.getElementById('container'));
+
+				         chart.draw(data, options);
+
+
+			         }
+
+      </script>
+    </body>
+</html>
