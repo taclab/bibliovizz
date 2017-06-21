@@ -4,7 +4,7 @@ exemplaire_site,bibliothèque,exemplaire,,,,
 exemplaire_localisation,sous-localisation,exemplaire,,,,
 exemplaire_typecote,"type de cote",exemplaire,,,,
 exemplaire_cote,"cote de l'exemplaire",exemplaire,,,,
-exemplaire_indice_dewey,"indice dewey de l'exemplaire","exemplaire/notice bib",676$a,,,"Cette donnée nécessite un traitement en amont. Il s'agit de récupérer le premier caractère numérique de l'indice"
+exemplaire_indice_dewey,"indice dewey de l'exemplaire","exemplaire/notice bib","cote ou 676$a",,,"Cette donnée nécessite un traitement en amont. Il s'agit de récupérer le premier caractère numérique de l'indice"
 exemplaire_subdivision_dewey,"subdivision dewey de l'exemplaire","exemplaire/notice bib","cote ou 676$a",,,"Cette donnée nécessite un traitement en amont. Il s'ait de récupérer les deux premiers caractères numériques de l'indice."
 exemplaire_cb,"codebarre de l'exemplaire",exemplaire,,,,
 exemplaire_datecreation,"date de création de l'exemplaire",,,,,
