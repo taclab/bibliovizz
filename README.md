@@ -12,6 +12,21 @@ Dans un deuxième temps, pour visualiser l'ensemble des données d'un catalogue,
 ![Schema](https://raw.githubusercontent.com/taclab/bibliovizz/master/docs/images/schema.jpg)
 
 
+## Installation 
+
+### Lancement de l'instance Elastiscsearch / Kibana
+/Docker
+`make start`
+
+### Import des données
+/import
+`node import.js`
+
+Accès 
+Elasticsearch - http://localhost:9200/
+Kibana - http://localhost:5601/
+
+
 ## Structuration de données
 
 ```
