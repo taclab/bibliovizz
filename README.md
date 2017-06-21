@@ -236,8 +236,8 @@ Les données structurées en JSON selon le modèle .... sont importées automati
   "cover": "https://images-na.ssl-images-amazon.com/images/P/2865860469.01.MZZZZZZZ.jpg"
 }
   ]
-}```
-
+}
+```
 
 ![Schema](https://raw.githubusercontent.com/taclab/bibliovizz/master/docs/images/dashboard-audit.jpg)
 
