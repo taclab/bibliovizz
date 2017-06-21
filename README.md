@@ -24,9 +24,10 @@ Dans un deuxième temps, pour visualiser l'ensemble des données d'un catalogue,
 /import
 `node import.js`
 
-Accès 
-Elasticsearch - http://localhost:9200/
+### Accès aux visualisation
 Kibana - http://localhost:5601/
+Moteur de recherche (Elasticsearch) - http://localhost:9200/
+/Dashboard
 
 
 ## Structuration de données
