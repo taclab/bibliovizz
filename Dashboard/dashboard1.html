@@ -31,8 +31,8 @@
     			<div class="nav-wrapper">
     				<a class="brand-logo">Dashboards</a>
     				<ul id="nav-mobile" class="right hide-on-med-and-down">
-				        <li><a href="index.html">Aide à la décision</a></li>
-				        <li><a href="index2.html">Lecteurs (Rennes 2)</a></li>
+				        <li><a href="dashboard1.html">Aide à la décision</a></li>
+				        <li><a href="dashboard2.html">Lecteurs (Rennes 2)</a></li>
 				    </ul>
     			</div>
     		</nav>
@@ -42,17 +42,17 @@
 	    		<div class="row s12">	
 		    		<div class="col s6 left">
 		    			<h5>Nombre total de prêts</h5>
-		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/df57f1f0-54c6-11e7-b641-c7300a14c1c0?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:'Nombre+de+pr%C3%AAts'),schema:metric,type:count)),listeners:(),params:(fontSize:60,handleNoResults:!t),title:'Nombre+de+pr%C3%AAts',type:metric))" ></iframe>
+		    			<iframe id="chiffres" src="http://86.238.202.61:5601/app/kibana#/visualize/edit/df57f1f0-54c6-11e7-b641-c7300a14c1c0?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:'Nombre+de+pr%C3%AAts'),schema:metric,type:count)),listeners:(),params:(fontSize:60,handleNoResults:!t),title:'Nombre+de+pr%C3%AAts',type:metric))" ></iframe>
 		    		</div>
 
 		    		<div class="col s6 right">
 		    			<h5>Nombre d'ouvrages</h5>
-		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/ed63dfb0-55d5-11e7-b1a0-47b77f1f498a?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:'Nombre+d!'ouvrage',field:biblio_id.keyword),schema:metric,type:cardinality)),listeners:(),params:(fontSize:60,handleNoResults:!t),title:'Nombre+d!'ouvrages',type:metric))" ></iframe>
+		    			<iframe id="chiffres" src="http://86.238.202.61:5601/app/kibana#/visualize/edit/ed63dfb0-55d5-11e7-b1a0-47b77f1f498a?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:'Nombre+d!'ouvrage',field:biblio_id.keyword),schema:metric,type:cardinality)),listeners:(),params:(fontSize:60,handleNoResults:!t),title:'Nombre+d!'ouvrages',type:metric))" ></iframe>
 		    		</div>
 
 		    		<div class="col s12">
 		    			<h5>Nombre d'exemplaires</h5>
-		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/ed63dfb0-55d5-11e7-b1a0-47b77f1f498a?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:'Nombre+d!'ouvrage',field:biblio_id.keyword),schema:metric,type:cardinality)),listeners:(),params:(fontSize:60,handleNoResults:!t),title:'Nombre+d!'ouvrages',type:metric))"></iframe>
+		    			<iframe id="chiffres" src="http://86.238.202.61:5601/app/kibana#/visualize/edit/ed63dfb0-55d5-11e7-b1a0-47b77f1f498a?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:'Nombre+d!'ouvrage',field:biblio_id.keyword),schema:metric,type:cardinality)),listeners:(),params:(fontSize:60,handleNoResults:!t),title:'Nombre+d!'ouvrages',type:metric))"></iframe>
 		    		</div>
 		    		
 		    		<div class="card col s12">
@@ -136,12 +136,12 @@
 
 		    		<div class="col s6">
 		    			<h5>Auteurs les + empruntés</h5>
-		    			<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/ea166460-55bf-11e7-af2a-712fbf321056?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(vis:(params:(sort:(columnIndex:!n,direction:!n)))),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:Pr%C3%AAts),schema:metric,type:count),(enabled:!t,id:'2',params:(customLabel:Auteurs,field:biblio_700auteur.keyword,order:desc,orderBy:'1',size:20),schema:bucket,type:terms)),listeners:(),params:(perPage:10,showMeticsAtAllLevels:!f,showPartialRows:!f,showTotal:!f,sort:(columnIndex:!n,direction:!n),totalFunc:sum),title:'Auteurs+les+plus+empruntes',type:table))"></iframe>
+		    			<iframe id="tableaux" src="http://86.238.202.61:5601/app/kibana#/visualize/edit/ea166460-55bf-11e7-af2a-712fbf321056?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(vis:(params:(sort:(columnIndex:!n,direction:!n)))),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:Pr%C3%AAts),schema:metric,type:count),(enabled:!t,id:'2',params:(customLabel:Auteurs,field:biblio_700auteur.keyword,order:desc,orderBy:'1',size:20),schema:bucket,type:terms)),listeners:(),params:(perPage:10,showMeticsAtAllLevels:!f,showPartialRows:!f,showTotal:!f,sort:(columnIndex:!n,direction:!n),totalFunc:sum),title:'Auteurs+les+plus+empruntes',type:table))"></iframe>
 		    		</div>
 
 		    		<div class="col s6">
 		    		<h5>Ouvrages les + empruntés</h5>
-		    		<iframe src="http://86.238.202.61:5601/app/kibana#/visualize/edit/f1e9c8e0-55c8-11e7-a839-3f18063f77d0?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'biblio_typedoc:LIVRE')),uiState:(vis:(params:(sort:(columnIndex:2,direction:desc)))),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:Pr%C3%AAts),schema:metric,type:count),(enabled:!t,id:'2',params:(customLabel:Titres,field:biblio_titre.keyword,order:desc,orderBy:'1',size:20),schema:bucket,type:terms),(enabled:!t,id:'3',params:(customLabel:Auteur,field:biblio_700auteur.keyword,order:desc,orderBy:'1',size:20),schema:bucket,type:terms)),listeners:(),params:(perPage:20,showMeticsAtAllLevels:!f,showPartialRows:!f,showTotal:!f,sort:(columnIndex:!n,direction:!n),totalFunc:sum),title:'Ouvrages+les+%2B+emprunt%C3%A9s',type:table))"></iframe>
+		    		<iframe id="tableaux" src="http://86.238.202.61:5601/app/kibana#/visualize/edit/f1e9c8e0-55c8-11e7-a839-3f18063f77d0?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'biblio_typedoc:LIVRE')),uiState:(vis:(params:(sort:(columnIndex:2,direction:desc)))),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:Pr%C3%AAts),schema:metric,type:count),(enabled:!t,id:'2',params:(customLabel:Titres,field:biblio_titre.keyword,order:desc,orderBy:'1',size:20),schema:bucket,type:terms),(enabled:!t,id:'3',params:(customLabel:Auteur,field:biblio_700auteur.keyword,order:desc,orderBy:'1',size:20),schema:bucket,type:terms)),listeners:(),params:(perPage:20,showMeticsAtAllLevels:!f,showPartialRows:!f,showTotal:!f,sort:(columnIndex:!n,direction:!n),totalFunc:sum),title:'Ouvrages+les+%2B+emprunt%C3%A9s',type:table))"></iframe>
 		    		</div>
 		    	</div>
 		    </article>
@@ -156,161 +156,160 @@
           	</div>
         </footer>
 
-        		<script language="JavaScript">
-		      var transaction;
-		      var annee;
-		      var resultatAns = [];
+        <script language="JavaScript">
+	      var transaction;
+	      var annee;
+	      var resultatAns = [];
 
-	      		for(annee = 2012; annee <= 2017 ; annee++){
-	      			if(annee == 2017)
-	      				loadData(annee.toString(),(annee-1).toString(),true);
-	      			else
-	      				loadData(annee.toString(),(annee-1).toString(),false);
-	      		}
+      		for(annee = 2012; annee <= 2017 ; annee++){
+      			if(annee == 2017)
+      				loadData(annee.toString(),(annee-1).toString(),true);
+      			else
+      				loadData(annee.toString(),(annee-1).toString(),false);
+      		}
 
 
-				function loadData(anneeS,anneeD,lancer) {
+			function loadData(anneeS,anneeD,lancer) {
 
-			   	// Define the chart to be drawn.
-				$.ajax({
-					    url      : "http://86.238.202.61:9200/prevu/_search",
-					    type: 'POST',
-					    data :
-						JSON.stringify(
-				        {
-							"query": {
-								"bool" :{
-									 "must" :[
-										{
-											"range" : {
-												"transaction_date": {
-												    "gte" : anneeD+"-01-01",
-												    "lt" :  anneeS+"-12-31"
-												}
-											}
-										},
-										{
-											"range" : {
-												"exemplaire_datecreation": {
-												    "gte" : anneeD+"-01-01",
-												    "lt" :  anneeS+"-12-31"
-												}
+		   	// Define the chart to be drawn.
+			$.ajax({
+				    url      : "http://86.238.202.61:9200/prevu/_search",
+				    type: 'POST',
+				    data :
+					JSON.stringify(
+			        {
+						"query": {
+							"bool" :{
+								 "must" :[
+									{
+										"range" : {
+											"transaction_date": {
+											    "gte" : anneeD+"-01-01",
+											    "lt" :  anneeS+"-12-31"
 											}
 										}
-									]
-								}
+									},
+									{
+										"range" : {
+											"exemplaire_datecreation": {
+											    "gte" : anneeD+"-01-01",
+											    "lt" :  anneeS+"-12-31"
+											}
+										}
+									}
+								]
 							}
-						}),
-					         
-					    dataType : "json",
-						error    : function(request, error) { // Info Debuggage si erreur         
-					        alert("Erreur : responseText: "+request.responseText);
-					    },
-						success  : function(data) {		 
-					        resultatAns[anneeS] = data;
-					        loadData2(lancer,anneeS);
-					    }       
-					});
+						}
+					}),
+				         
+				    dataType : "json",
+					error    : function(request, error) { // Info Debuggage si erreur         
+				        alert("Erreur : responseText: "+request.responseText);
+				    },
+					success  : function(data) {		 
+				        resultatAns[anneeS] = data;
+				        loadData2(lancer,anneeS);
+				    }       
+				});
+			}
+		     
+
+		     function loadData2(lancer,anneeS){
+
+		     	if(lancer == true){
+		         	$.ajax({
+		     			url      : "http://86.238.202.61:9200/prevu/_search",
+				        type: 'POST',
+				        data :
+					    JSON.stringify(
+			            	{
+								"query": {
+									"range" : {
+									   	"transaction_date": {
+									      	"gte" : anneeS+"-01-01",
+									       	"lt" :  anneeS+"-12-31"
+									    }
+								  	}	
+								}
+							}),
+				        dataType : "json",
+
+				        error : function(request, error) { // Info Debuggage si erreur         
+				        	alert("Erreur : responseText: "+request.responseText);
+				        },
+
+				        success : function(data) {
+				        	transaction = data;
+				            draw();
+				        }       
+				    });
+				} else {
+					$.ajax({
+		     
+				          url      : "http://86.238.202.61:9200/prevu/_search",
+				          type: 'POST',
+				          data :
+					          JSON.stringify(
+			                    {
+								   "query": {
+										"range" : {
+										   "transaction_date": {
+										       "gte" : anneeS+"-01-01",
+										       "lt" :  anneeS+"-12-31"
+										    }
+									  	}	
+									}
+								}),
+
+				          dataType : "json",
+
+				          error    : function(request, error) { // Info Debuggage si erreur         
+				                       alert("Erreur : responseText: "+request.responseText);
+				                     },
+
+				          success  : function(data) {
+				          				transaction = data;				                      	
+				                     }       
+				     });
 				}
-			     
-
-			     function loadData2(lancer,anneeS){
-
-			     	if(lancer == true){
-			         	 $.ajax({
-			     
-					          url      : "http://86.238.202.61:9200/prevu/_search",
-					          type: 'POST',
-					           data :
-						          JSON.stringify(
-				                    {
-									   "query": {
-											"range" : {
-											   "transaction_date": {
-											       "gte" : anneeS+"-01-01",
-											       "lt" :  anneeS+"-12-31"
-											    }
-										  	}	
-										}
-									}),
-					          dataType : "json",
-
-					          error    : function(request, error) { // Info Debuggage si erreur         
-					                       alert("Erreur : responseText: "+request.responseText);
-					                     },
-
-					          success  : function(data) {
-					          				transaction = data;
-					                      	draw();
-					                     }       
-					     });
-					}else{
-						 $.ajax({
-			     
-					          url      : "http://86.238.202.61:9200/prevu/_search",
-					          type: 'POST',
-					          data :
-						          JSON.stringify(
-				                    {
-									   "query": {
-											"range" : {
-											   "transaction_date": {
-											       "gte" : anneeS+"-01-01",
-											       "lt" :  anneeS+"-12-31"
-											    }
-										  	}	
-										}
-									}),
-
-					          dataType : "json",
-
-					          error    : function(request, error) { // Info Debuggage si erreur         
-					                       alert("Erreur : responseText: "+request.responseText);
-					                     },
-
-					          success  : function(data) {
-					          				transaction = data;				                      	
-					                     }       
-					     });
-					}
 
 
-			     }
+		     }
 
-			     function draw(){
-			     	google.charts.setOnLoadCallback(drawCharts); 
-			     }
+		     function draw(){
+		     	google.charts.setOnLoadCallback(drawCharts); 
+		     }
 
-			     function drawCharts(){
+		     function drawCharts(){
 
-				         var data = google.visualization.arrayToDataTable([
+			         var data = google.visualization.arrayToDataTable([
 
-				            ['Year', 'Nouveautés (-2 ans)', 'Collection totale' ],
+			            ['Year', 'Nouveautés (-2 ans)', 'Collection totale' ],
 
-				   	      	['2012', resultatAns['2012'].hits.total, transaction.hits.total],
-				   	      	['2013', resultatAns['2013'].hits.total, transaction.hits.total],
-				   	      	['2014', resultatAns['2014'].hits.total, transaction.hits.total],
-				   	      	['2015', resultatAns['2015'].hits.total, transaction.hits.total  ],
-				   	      	['2016', resultatAns['2016'].hits.total, transaction.hits.total],
-				   	      	['2017', resultatAns['2017'].hits.total, transaction.hits.total]
+			   	      	['2012', resultatAns['2012'].hits.total, transaction.hits.total],
+			   	      	['2013', resultatAns['2013'].hits.total, transaction.hits.total],
+			   	      	['2014', resultatAns['2014'].hits.total, transaction.hits.total],
+			   	      	['2015', resultatAns['2015'].hits.total, transaction.hits.total  ],
+			   	      	['2016', resultatAns['2016'].hits.total, transaction.hits.total],
+			   	      	['2017', resultatAns['2017'].hits.total, transaction.hits.total]
 
-				         ]);
+			         ]);
 
-				         var options = {
+			         var options = {
 
-				            title: 'Proportion des nouveautés dans les prêts annuels ',
+			            title: 'Proportion des nouveautés dans les prêts annuels ',
 
-				            isStacked:'percent'	  
+			            isStacked:'percent'	  
 
-				         };  
-				         // Instantiate and draw the chart.
+			         };  
+			         // Instantiate and draw the chart.
 
-				         var chart = new google.visualization.ColumnChart(document.getElementById('container'));
+			         var chart = new google.visualization.ColumnChart(document.getElementById('container'));
 
-				         chart.draw(data, options);
+			         chart.draw(data, options);
 
 
-			         }
+		         }
 
       </script>
     </body>
