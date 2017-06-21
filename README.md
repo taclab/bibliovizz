@@ -256,6 +256,11 @@ Kibana - http://localhost:5601/
   ]
 }
 ```
+[Voir la documentation](https://github.com/taclab/bibliovizz/blob/master/docs/doc-data.csv)
 
+### Visualisation 
+
+
+https://github.com/taclab/bibliovizz/blob/master/docs/doc-viz.csv
 ![Schema](https://raw.githubusercontent.com/taclab/bibliovizz/master/docs/images/dashboard-audit.jpg)
 
