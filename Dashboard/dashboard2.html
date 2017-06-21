@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard - Aide à la décision</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="bibliovizz.css">
+        
+        <!-- Ajax -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+        <!-- Materialze -->
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+    </head>
+
+    <body>
+    	<section>
+    		<header></header>
+
+            <nav>
+                <div class="nav-wrapper">
+                    <a class="brand-logo">Dashboards</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="dashboard1.html">Aide à la décision</a></li>
+                        <li><a href="dashboard2.html">Lecteurs (Rennes 2)</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+    		<article>
+                <h1>Dashboard - Lecteurs (Rennes 2)</h1>
+
+                <div class="row s12">
+                    
+                    <div class="card col s6">
+                        <h5>Les Ouvrages les + empruntés</h5>
+                        <iframe id="tableaux" src="http://86.238.202.61:5601/app/kibana#/visualize/edit/f1e9c8e0-55c8-11e7-a839-3f18063f77d0?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'biblio_typedoc:LIVRE')),uiState:(vis:(params:(sort:(columnIndex:2,direction:desc)))),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:Pr%C3%AAts),schema:metric,type:count),(enabled:!t,id:'2',params:(customLabel:Titres,field:biblio_titre.keyword,order:desc,orderBy:'1',size:20),schema:bucket,type:terms),(enabled:!t,id:'3',params:(customLabel:Auteur,field:biblio_700auteur.keyword,order:desc,orderBy:'1',size:20),schema:bucket,type:terms)),listeners:(),params:(perPage:20,showMeticsAtAllLevels:!f,showPartialRows:!f,showTotal:!f,sort:(columnIndex:!n,direction:!n),totalFunc:sum),title:'Ouvrages+les+%2B+emprunt%C3%A9s',type:table))"></iframe>
+                    </div>
+
+                    <div class="card col s6">
+                        <h5>Auteurs les + empruntés</h5>
+                        <iframe id="tableaux" src="http://86.238.202.61:5601/app/kibana#/visualize/edit/ea166460-55bf-11e7-af2a-712fbf321056?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(vis:(params:(sort:(columnIndex:!n,direction:!n)))),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:Pr%C3%AAts),schema:metric,type:count),(enabled:!t,id:'2',params:(customLabel:Auteurs,field:biblio_700auteur.keyword,order:desc,orderBy:'1',size:20),schema:bucket,type:terms)),listeners:(),params:(perPage:10,showMeticsAtAllLevels:!f,showPartialRows:!f,showTotal:!f,sort:(columnIndex:!n,direction:!n),totalFunc:sum),title:'Auteurs+les+plus+empruntes',type:table))"></iframe>
+                    </div>
+
+                    <div class="card col s6">
+                        <h5>DVD les + empruntés</h5>
+                        <iframe id="tableaux" src="http://86.238.202.61:5601/app/kibana#/visualize/edit/26c34b90-55c9-11e7-a839-3f18063f77d0?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'biblio_typedoc:VIDEO')),uiState:(vis:(params:(sort:(columnIndex:2,direction:desc)))),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:Pr%C3%AAts),schema:metric,type:count),(enabled:!t,id:'2',params:(customLabel:Titres,field:biblio_titre.keyword,order:desc,orderBy:'1',size:20),schema:bucket,type:terms),(enabled:!t,id:'3',params:(customLabel:R%C3%A9alisateur,field:biblio_700auteur.keyword,order:desc,orderBy:'1',size:5),schema:bucket,type:terms)),listeners:(),params:(perPage:20,showMeticsAtAllLevels:!f,showPartialRows:!f,showTotal:!f,sort:(columnIndex:!n,direction:!n),totalFunc:sum),title:'DVD+les+%2B+emprunt%C3%A9s',type:table))"></iframe>
+                    </div>
+
+                    <div class="card col s6">
+                        <h5>Types de doc les + empruntés</h5>
+                        <iframe id="tableaux" src="http://86.238.202.61:5601/app/kibana#/visualize/edit/9177f460-55c7-11e7-a839-3f18063f77d0?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(field:biblio_typedoc.keyword,order:desc,orderBy:'1',size:20),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTooltip:!t,isDonut:!f,legendPosition:right),title:'Types+de+doc+les+%2B+emprunt%C3%A9s',type:pie))"></iframe>
+                    </div>
+
+
+                    <div class="card col s6">
+                        <h5>Mémoires et thèses les + empruntés</h5>
+                        <iframe id="tableaux" src="http://86.238.202.61:5601/app/kibana#/visualize/edit/905f8a10-55c8-11e7-a839-3f18063f77d0?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'biblio_typedoc:THESE')),uiState:(vis:(params:(sort:(columnIndex:2,direction:desc)))),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:Pr%C3%AAts),schema:metric,type:count),(enabled:!t,id:'2',params:(customLabel:Titres,field:biblio_titre.keyword,order:desc,orderBy:'1',size:20),schema:bucket,type:terms),(enabled:!t,id:'3',params:(customLabel:Auteur,field:biblio_700auteur.keyword,order:desc,orderBy:'1',size:20),schema:bucket,type:terms)),listeners:(),params:(perPage:20,showMeticsAtAllLevels:!f,showPartialRows:!f,showTotal:!f,sort:(columnIndex:!n,direction:!n),totalFunc:sum),title:'M%C3%A9moires+et+Th%C3%A8ses+les+%2B+emprunt%C3%A9s',type:table))"></iframe>
+                    </div>
+
+                    <div class="card col s6">
+                        <h5>Bandes déssinés les + empruntées</h5>
+                        <iframe id="tableaux" src="http://86.238.202.61:5601/app/kibana#/visualize/edit/c3326750-55c8-11e7-a839-3f18063f77d0?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-5y,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'biblio_typedoc:BD')),uiState:(vis:(params:(sort:(columnIndex:2,direction:desc)))),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:Pr%C3%AAts),schema:metric,type:count),(enabled:!t,id:'2',params:(customLabel:Titres,field:biblio_titre.keyword,order:desc,orderBy:'1',size:20),schema:bucket,type:terms),(enabled:!t,id:'3',params:(customLabel:Auteur,field:biblio_700auteur.keyword,order:desc,orderBy:'1',size:20),schema:bucket,type:terms)),listeners:(),params:(perPage:20,showMeticsAtAllLevels:!f,showPartialRows:!f,showTotal:!f,sort:(columnIndex:!n,direction:!n),totalFunc:sum),title:'Bandes+dessin%C3%A9es+les+%2B+emprunt%C3%A9s',type:table))"></iframe>
+                    </div>    
+                </div>	
+    		</article>
+
+    		<footer class="page-footer">
+                <div class="footer-copyright">
+                    <div class="container">
+                        © 2017 Copyright Text
+                        <a class="grey-text text-lighten-4 right" href="#!">Plus de liens</a>
+                    </div>
+                </div>
+            </footer>
+    	</section>
+    </body>
+</html>
