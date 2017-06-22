@@ -30,7 +30,7 @@ Moteur de recherche (Elasticsearch) - http://localhost:9200/
 /Dashboard
 
 
-## Structuration de données
+## Structuration et modèle de données (work in progress)
 
 ```
 {
